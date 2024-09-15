@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+color: white;
+
+}
+.form{
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* justify-content: ; */
+    gap: 20px;
+
+align-items: center;
+
+}
+.inputone{
+background-color: black;
+width: 80%;
+height: 2rem;
+
+color:white;
+
+}
+textarea{
+    height: 4rem;
+    width: 80%;
+    margin-top: 0.5rem;
+
+ background-color: black;
+ color: white;
+
+}
+.inputtwo{
+    width: 6rem;
+    height: 2rem;
+    background-color:rgb(43, 43, 185);
+    border-radius: 25px;
+color: white;
+
+
+
+}
+.tasks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+margin-left:10rem;
+margin-top: 2rem;
+color: white;
+
+}
+.card{
+    /* display: none; */
+
+    width: 10rem;
+    height: 6rem;
+    background-color: black;
+    color: white;
+}
+
+.notasks{
+    color: black;
+    font-size: 20px;
+
+}

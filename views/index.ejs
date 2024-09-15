@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <form class="form" action="/create" method="POST">
+        <input class="inputone" type="text" placeholder="Enter task title" name="title" required>
+        <textarea name="details" placeholder="Enter task details" required></textarea>
+        <input class="inputtwo" type="submit" value="Create Task">
+    </form>
+
+    <div class="tasks">
+        <% if (files && files.length > 0) { %>
+            <% files.forEach(function(file) { %>
+                <div class="card">
+                    <h1 class="tasksh">
+                        <%= file.replace('.txt', '') %> <!-- Display task title without .txt -->
+                    </h1>
+                    <a href="#">Read more</a>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <h1 class="notasks">No tasks available</h1>
+        <% } %>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
